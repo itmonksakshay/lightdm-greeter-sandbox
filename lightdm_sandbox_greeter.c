@@ -288,9 +288,6 @@ GtkTreeModel *data_entry_model(){
 	}
 	free(user_info);
 	free(user_value);
-	free(user_detail);
-
-	//Session Details
 	
 	gtk_tree_store_append(treestore, &toplevel, NULL);
   	gtk_tree_store_set(treestore, &toplevel,NAME, "Session Details",-1);
@@ -309,8 +306,7 @@ GtkTreeModel *data_entry_model(){
 		}
 	}
 	free(session_value);
-	free(session_detail);	
-	
+
 	//Keyboard List
 	
 	gtk_tree_store_append(treestore, &toplevel, NULL);
@@ -337,8 +333,6 @@ GtkTreeModel *data_entry_model(){
 	}
 	free(keyboard_info);
 	free(keyboard_value);
-	free(keyboard_detail);
-
 	
 	//Available Languages
 	
@@ -368,8 +362,6 @@ GtkTreeModel *data_entry_model(){
 	}
 	free(language_info);
 	free(language_value);
-	free(language_detail);
-
 	
 	return GTK_TREE_MODEL(treestore);
 	
@@ -413,8 +405,7 @@ int main(int argc,char **argv){
 	GtkWidget *vbox;
       	GtkWidget *sw;
       	GtkWidget *treeview;
-      	GtkTreeModel *model;
-
+   
       /* create window, etc */
       	window = gtk_window_new (GTK_WINDOW_TOPLEVEL);
       	gtk_window_set_title (GTK_WINDOW (window), "Tree View");
